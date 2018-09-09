@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		EB8B7C162142F6E9001D7C42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B7C152142F6E9001D7C42 /* AppDelegate.swift */; };
-		EB8B7C182142F6E9001D7C42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B7C172142F6E9001D7C42 /* ViewController.swift */; };
 		EB8B7C1B2142F6E9001D7C42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8B7C192142F6E9001D7C42 /* Main.storyboard */; };
 		EB8B7C1D2142F6EA001D7C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB8B7C1C2142F6EA001D7C42 /* Assets.xcassets */; };
 		EB8B7C202142F6EA001D7C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB8B7C1E2142F6EA001D7C42 /* LaunchScreen.storyboard */; };
+		EB8B7C282142F83D001D7C42 /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B7C272142F83D001D7C42 /* LibraryTableViewController.swift */; };
+		EB8B7C2A2142F943001D7C42 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B7C292142F943001D7C42 /* Book.swift */; };
+		EB8B7C2C2142F9B2001D7C42 /* BooksInLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B7C2B2142F9B2001D7C42 /* BooksInLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EB8B7C122142F6E9001D7C42 /* LibraryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibraryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB8B7C152142F6E9001D7C42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB8B7C172142F6E9001D7C42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB8B7C1A2142F6E9001D7C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB8B7C1C2142F6EA001D7C42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB8B7C1F2142F6EA001D7C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB8B7C212142F6EA001D7C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB8B7C272142F83D001D7C42 /* LibraryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
+		EB8B7C292142F943001D7C42 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		EB8B7C2B2142F9B2001D7C42 /* BooksInLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksInLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				EB8B7C152142F6E9001D7C42 /* AppDelegate.swift */,
-				EB8B7C172142F6E9001D7C42 /* ViewController.swift */,
 				EB8B7C192142F6E9001D7C42 /* Main.storyboard */,
 				EB8B7C1C2142F6EA001D7C42 /* Assets.xcassets */,
 				EB8B7C1E2142F6EA001D7C42 /* LaunchScreen.storyboard */,
 				EB8B7C212142F6EA001D7C42 /* Info.plist */,
+				EB8B7C272142F83D001D7C42 /* LibraryTableViewController.swift */,
+				EB8B7C292142F943001D7C42 /* Book.swift */,
+				EB8B7C2B2142F9B2001D7C42 /* BooksInLibrary.swift */,
 			);
 			path = LibraryApp;
 			sourceTree = "<group>";
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB8B7C182142F6E9001D7C42 /* ViewController.swift in Sources */,
+				EB8B7C282142F83D001D7C42 /* LibraryTableViewController.swift in Sources */,
+				EB8B7C2C2142F9B2001D7C42 /* BooksInLibrary.swift in Sources */,
 				EB8B7C162142F6E9001D7C42 /* AppDelegate.swift in Sources */,
+				EB8B7C2A2142F943001D7C42 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
