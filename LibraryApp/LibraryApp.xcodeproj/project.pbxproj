@@ -14,6 +14,7 @@
 		EB8B7C282142F83D001D7C42 /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B7C272142F83D001D7C42 /* LibraryTableViewController.swift */; };
 		EB8B7C2A2142F943001D7C42 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B7C292142F943001D7C42 /* Book.swift */; };
 		EB8B7C2C2142F9B2001D7C42 /* BooksInLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B7C2B2142F9B2001D7C42 /* BooksInLibrary.swift */; };
+		EB8B7C2E2145BDC7001D7C42 /* AddBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B7C2D2145BDC7001D7C42 /* AddBookTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EB8B7C272142F83D001D7C42 /* LibraryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
 		EB8B7C292142F943001D7C42 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		EB8B7C2B2142F9B2001D7C42 /* BooksInLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksInLibrary.swift; sourceTree = "<group>"; };
+		EB8B7C2D2145BDC7001D7C42 /* AddBookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +61,12 @@
 			isa = PBXGroup;
 			children = (
 				EB8B7C152142F6E9001D7C42 /* AppDelegate.swift */,
-				EB8B7C192142F6E9001D7C42 /* Main.storyboard */,
 				EB8B7C1C2142F6EA001D7C42 /* Assets.xcassets */,
 				EB8B7C1E2142F6EA001D7C42 /* LaunchScreen.storyboard */,
 				EB8B7C212142F6EA001D7C42 /* Info.plist */,
+				EB8B7C192142F6E9001D7C42 /* Main.storyboard */,
 				EB8B7C272142F83D001D7C42 /* LibraryTableViewController.swift */,
+				EB8B7C2D2145BDC7001D7C42 /* AddBookTableViewController.swift */,
 				EB8B7C292142F943001D7C42 /* Book.swift */,
 				EB8B7C2B2142F9B2001D7C42 /* BooksInLibrary.swift */,
 			);
@@ -144,6 +147,7 @@
 				EB8B7C282142F83D001D7C42 /* LibraryTableViewController.swift in Sources */,
 				EB8B7C2C2142F9B2001D7C42 /* BooksInLibrary.swift in Sources */,
 				EB8B7C162142F6E9001D7C42 /* AppDelegate.swift in Sources */,
+				EB8B7C2E2145BDC7001D7C42 /* AddBookTableViewController.swift in Sources */,
 				EB8B7C2A2142F943001D7C42 /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

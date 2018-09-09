@@ -1,23 +1,20 @@
 //
-//  LibraryTableViewController.swift
+//  AddBookTableViewController.swift
 //  LibraryApp
 //
-//  Created by Kendall Poindexter on 9/7/18.
+//  Created by Kendall Poindexter on 9/9/18.
 //  Copyright © 2018 Kendall Poindexter. All rights reserved.
 //
 
 import UIKit
 
-class LibraryTableViewController: UITableViewController {
-    //MARK: - Properties
-    
-    var bookShelf = BookShelf()
+class AddBookTableViewController: UITableViewController {
 
-    
-    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -32,32 +29,23 @@ class LibraryTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return bookShelf.books.count
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BooksOnShelf", for: indexPath)
-        let book = bookShelf.books[indexPath.row]
-        
-        cell.textLabel?.text = "\(book.title!) by \(book.author!)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
 
         return cell
-        
-        //MARK: - Actions
-        
-    
-        
-        
     }
- 
+    */
 
     /*
     // Override to support conditional editing of the table view.

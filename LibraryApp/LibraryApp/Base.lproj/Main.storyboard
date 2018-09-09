@@ -33,12 +33,48 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Books" id="5qK-VN-T8Q">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="cRi-QQ-gn4"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cRi-QQ-gn4">
+                            <connections>
+                                <segue destination="eer-lE-1SZ" kind="show" identifier="addBooks" id="FCh-jb-KbD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWi-oh-zHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072.8" y="100.29985007496252"/>
+        </scene>
+        <!--Add Books-->
+        <scene sceneID="bX4-kb-ryI">
+            <objects>
+                <tableViewController id="eer-lE-1SZ" customClass="AddBookTableViewController" customModule="LibraryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="11d-gM-m9H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kXO-oE-EVw">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kXO-oE-EVw" id="9S2-5P-rHM">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eer-lE-1SZ" id="t4c-Vv-TQi"/>
+                            <outlet property="delegate" destination="eer-lE-1SZ" id="2xh-r4-pUj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Books" largeTitleDisplayMode="never" id="Our-aD-i05" userLabel="Add Book">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="IxN-uy-hJp"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="qOF-G2-jF7"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQD-xi-bye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1890" y="100"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yDr-fl-OBJ">
