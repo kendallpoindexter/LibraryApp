@@ -8,7 +8,24 @@
 
 import UIKit
 
+protocol AddBookTableViewControllerDelegate: class {
+    
+    func addBookTableViewControllerDidCancel( _ controller: AddBookTableViewController)
+    
+    func addBookTableViewController(_ controller: AddBookTableViewController, didFinishAdding book: Book)
+}
+
 class AddBookTableViewController: UITableViewController {
+    
+    //MARK: - Properties
+    
+    weak var delegate: AddBookTableViewControllerDelegate?
+    
+    //MARK: - Outlets
+    
+    @IBOutlet weak var titleInput: UITextField!
+    @IBOutlet weak var authorInput: UITextField!
+    
     
     
     //MARK: - LifeCycles
@@ -23,30 +40,30 @@ class AddBookTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    // MARK: - Table view data source
+    // A protocol that allows static cells to appear when app is run
+    //Why?
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-        
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        return  nil
     }
     
     //MARK: - Actions
 
     @IBAction func cancel(_ sender: UIBarButtonItem) {
+        delegate?.addBookTableViewControllerDidCancel(self)
+        
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func done(_ sender: UIBarButtonItem) {
-        navigationController?.popViewController(animated: true)
-
+        var book = Book()
+        
+        book.title = titleInput.text!
+        book.author = authorInput.text!
+        
+        delegate?.addBookTableViewController(self, didFinishAdding: book)
+        
     }
-    
     
 }
 

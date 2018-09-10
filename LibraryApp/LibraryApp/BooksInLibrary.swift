@@ -11,5 +11,5 @@ import Foundation
 
 
 struct BookShelf {
-    let books: [Book] = [Book(title: "Between The World And Me", author: "Ta-Nehisi Coates")]
+    var books: [Book] = [Book(title: "Between The World And Me", author: "Ta-Nehisi Coates")]
 }

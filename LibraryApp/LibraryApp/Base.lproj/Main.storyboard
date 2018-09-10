@@ -123,6 +123,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="authorInput" destination="sbd-o0-zHQ" id="Vog-Xg-Vbf"/>
+                        <outlet property="titleInput" destination="gNB-fI-njW" id="D9j-t1-nMA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQD-xi-bye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

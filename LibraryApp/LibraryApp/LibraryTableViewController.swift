@@ -8,10 +8,26 @@
 
 import UIKit
 
-class LibraryTableViewController: UITableViewController {
+class LibraryTableViewController: UITableViewController, AddBookTableViewControllerDelegate {
+    
+    func addBookTableViewControllerDidCancel(_ controller: AddBookTableViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func addBookTableViewController(_ controller: AddBookTableViewController, didFinishAdding book: Book) {
+        let newRowIndex = bookShelf.books.count
+        bookShelf.books.append(book)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath]
+        tableView.insertRows(at: indexPaths, with: .automatic)
+        navigationController?.popViewController(animated: true)
+    }
+    
     //MARK: - Properties
     
     var bookShelf = BookShelf()
+    
 
     
     //MARK: - LifeCycle
@@ -23,10 +39,6 @@ class LibraryTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
 
@@ -50,14 +62,14 @@ class LibraryTableViewController: UITableViewController {
         // Configure the cell...
 
         return cell
-        
-        //MARK: - Actions
-        
-    
-        
-        
     }
- 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "addBooks" {
+            let controller = segue.destination as! AddBookTableViewController
+            controller.delegate = self
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
