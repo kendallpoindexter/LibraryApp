@@ -28,39 +28,39 @@ class LibraryTableViewController: UITableViewController, AddBookTableViewControl
     
     var bookShelf = BookShelf()
     
-
+    
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
-
+    
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return bookShelf.books.count
     }
-
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BooksOnShelf", for: indexPath)
         let book = bookShelf.books[indexPath.row]
         
         cell.textLabel?.text = "\(book.title!) by \(book.author!)"
-
+        
         // Configure the cell...
-
+        
         return cell
     }
     
@@ -69,6 +69,21 @@ class LibraryTableViewController: UITableViewController, AddBookTableViewControl
             let controller = segue.destination as! AddBookTableViewController
             controller.delegate = self
         }
+    }
+    
+    func swipeToDelete(indexPath: IndexPath) {
+        bookShelf.books.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            swipeToDelete(indexPath: indexPath)
+        }
+        
+        
+        
+        
     }
 
     /*

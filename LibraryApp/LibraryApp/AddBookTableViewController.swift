@@ -32,7 +32,8 @@ class AddBookTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        titleInput.becomeFirstResponder()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -58,6 +59,7 @@ class AddBookTableViewController: UITableViewController {
     @IBAction func done(_ sender: UIBarButtonItem) {
         var book = Book()
         
+       
         book.title = titleInput.text!
         book.author = authorInput.text!
         
